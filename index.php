@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solpaneler</title>
-<link rel="stylesheet" href="css/style.css">
-    
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -36,28 +36,11 @@
     </nav>
 </header>
 
-<main class="product-hero">
-    <div class="hero-text">
-        <h1>
-            Alla solpaneler
-        </h1>
-
-        <p>
-            Vi på Solproffset erbjuder ett brett sortiment av solceller och
-            solpaneler från flera märken som tex Trina solar, Longi solar,
-            Meyer Burger och Hyundai.
-            <br>
-            Vi erbjuder Trina Solceller och Longi solceller till marknadens
-            bäst pris tack vare stora inköp.
-        </p>
-    </div>
-
-    <div class="hero-image">
-        <img src="https://sunlux.se/wp-content/uploads/2023/07/205317_1-600x600.jpg" alt="Svart solpanel">
-    </div>
-</main>
 </body>
 </html>
+
+
+
 
 
 

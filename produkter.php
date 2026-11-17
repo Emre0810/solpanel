@@ -1,3 +1,13 @@
+<?php
+require_once 'assets/function.php';
+
+$records = getAllPanels();
+
+$row_Panels=$records->fetch(PDO::FETCH_ASSOC);    
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -5,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solpaneler</title>
 <link rel="stylesheet" href="css/style.css">
-    
+<link rel=
 </head>
 <body>
 
@@ -24,7 +34,8 @@
         </form>
 
         <a href="produkter.php#varukorg" class="cart">
-             <span>🛒</span>
+           🛒 <span id="cart-count">0</span>
+             
         </a>
     </div>
 
@@ -61,7 +72,34 @@
              alt="Svart solpanel">
     </div>
 </main>
-S
+<div class="product-main">
+    <?php do { ?>
+
+        <div class="product-kort">
+            <div class="product-bild">
+                <img src="<?php echo $row_Panels['bild']; ?>" alt="Solpanel">
+            </div>
+            <div class="product-info">
+            
+                <h3>
+                    <?php echo $row_Panels['panelid']; ?>
+                    <?php echo $row_Panels['installationid']; ?>
+                    <?php echo nl2br(htmlspecialchars($row_Panels['modell'], ENT_QUOTES, 'UTF-8')); ?>
+                    <?php echo htmlspecialchars($row_Panels['effekt'], ENT_QUOTES, 'UTF-8'); ?>
+                </h3>
+                <div class="product-pris">
+                    <?php echo $row_Panels['pris']; ?> kr
+                </div>
+                <button class="kund-button">
+                    Lägg till i varukorgen
+                </button>
+            </div>
+        </div>
+    <?php } while ($row_Panels = $records->fetch(PDO::FETCH_ASSOC)); ?>
+
+</div>
+        
+<script src="assets/java.js"></script>
 </body>
 </html>
 

@@ -1,3 +1,6 @@
+<?php
+require_once 'assets/function.php';
+?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
